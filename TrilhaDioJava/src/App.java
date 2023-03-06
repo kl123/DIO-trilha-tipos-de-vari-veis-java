@@ -32,17 +32,11 @@ public class App {
         while ((numeroAssunto < 6) && (numeroAssunto > 0)) {
             switch (numeroAssunto) {
                 case 1:
-                    variaveis.imprimirTiposPrimitivos();
-                    variaveis.imprimirValoresMaximos();
-                    variaveis.imprimirValoresMinimos();
+                    variaveis.selecionarSubTopico();
                     break;
 
                 case 2:
-                    operadores.imprimirOperadorDeAtribuicao();
-                    operadores.imprimirOperadoresAritimeticos();
-                    operadores.imprimirOperadoresUnarios();
-                    operadores.imprimirOperadoresRelacionais();
-                    operadores.imprimirOperadoresLogicos();
+                    operadores.selecionarSubTopico();
                     break;
 
                 case 3:

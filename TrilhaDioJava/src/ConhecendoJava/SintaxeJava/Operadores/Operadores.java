@@ -1,8 +1,10 @@
 package ConhecendoJava.SintaxeJava.Operadores;
 
+import java.util.Scanner;
+
 public class Operadores {
         public void imprimirOperadorDeAtribuicao() {
-                String operadorDeAtribuicao = "O operador de atribuição é representado pelo simbolo de igualdade =\n";
+                String operadorDeAtribuicao = "\nO operador de atribuição é representado pelo simbolo de igualdade =\n";
                 operadorDeAtribuicao = operadorDeAtribuicao.concat("Exemplos:\n");
                 operadorDeAtribuicao = operadorDeAtribuicao.concat("String nome = \"GLEYSON\";\n");
                 operadorDeAtribuicao = operadorDeAtribuicao.concat("int idade = 22;\n");
@@ -14,7 +16,7 @@ public class Operadores {
         }
 
         public void imprimirOperadoresAritimeticos() {
-                String operadoresAritimeticos = "Os operadores aritméticos são: + (adição), - (subtração), * (multiplicação) e / (divisão)\n";
+                String operadoresAritimeticos = "\nOs operadores aritméticos são: + (adição), - (subtração), * (multiplicação) e / (divisão)\n";
                 operadoresAritimeticos = operadoresAritimeticos.concat("double soma = 10.5 + 15.7;\n");
                 operadoresAritimeticos = operadoresAritimeticos.concat("int subtração = 113 - 25;\n");
                 operadoresAritimeticos = operadoresAritimeticos.concat("int multiplicacao = 20 * 7;\n");
@@ -29,7 +31,7 @@ public class Operadores {
         }
 
         public void imprimirOperadoresUnarios() {
-                String operadoresUnarios = "Os operadores unários realizam alguns trabalhos básicos como incrementar, decrementar, inverter valores numéricos e booleanos.\n";
+                String operadoresUnarios = "\nOs operadores unários realizam alguns trabalhos básicos como incrementar, decrementar, inverter valores numéricos e booleanos.\n";
                 operadoresUnarios = operadoresUnarios.concat(
                                 "(+) Operador unário de valor positivo – números são positivos sem esse operador explicitamente;\n");
                 operadoresUnarios = operadoresUnarios
@@ -51,7 +53,7 @@ public class Operadores {
         }
 
         public void imprimirOperadoresLogicos() {
-                String operadoresLogicos = "Os operadores lógicos, representam o recurso que nos permite criar expressões lógicas maiores, a partir da junção de duas ou mais expressões.\n";
+                String operadoresLogicos = "\nOs operadores lógicos, representam o recurso que nos permite criar expressões lógicas maiores, a partir da junção de duas ou mais expressões.\n";
                 operadoresLogicos = operadoresLogicos.concat("&& Operador Lógico \"E\"\n");
                 operadoresLogicos = operadoresLogicos.concat("|| Operador Lógico \"OU\"\n");
                 operadoresLogicos = operadoresLogicos.concat("if(condicao1 && condicao2)\n");
@@ -64,7 +66,7 @@ public class Operadores {
         }
 
         public void imprimirOperadoresRelacionais() {
-                String operadoresRelacionais = "Os operadores relacionais, avaliam a relação entre duas variáveis ou expressões.\n";
+                String operadoresRelacionais = "\nOs operadores relacionais, avaliam a relação entre duas variáveis ou expressões.\n";
                 operadoresRelacionais = operadoresRelacionais
                                 .concat("== Quando desejamos verificar se uma variável é IGUAL A outra.\n");
                 operadoresRelacionais = operadoresRelacionais
@@ -78,5 +80,48 @@ public class Operadores {
                 operadoresRelacionais = operadoresRelacionais
                                 .concat("<= Quando desejamos verificar se uma variável é MENOR OU IGUAL a outra.\n");
                 System.out.println(operadoresRelacionais);
+        }
+
+        public void selecionarSubTopico() {
+                int numeroSubTopico;
+                String texto = "\nDigite o número conrrespondente ao subtópico de tipos de operadores que queria saber:\n";
+                texto = texto.concat("1. Operador de atribuicao\n");
+                texto = texto.concat("2. Operadores aritimeticos\n");
+                texto = texto.concat("3. Operadores unarios\n");
+                texto = texto.concat("4. Operadores logicos\n");
+                texto = texto.concat("5. Operadores relacionais\n");
+                texto = texto.concat("Digite qualquer outro número para sair\n");
+                System.out.println(texto);
+
+                Scanner scanner = new Scanner(System.in);
+                numeroSubTopico = scanner.nextInt();
+
+                while ((numeroSubTopico < 4) && (numeroSubTopico > 0)) {
+                        switch (numeroSubTopico) {
+                                case 1:
+                                        imprimirOperadorDeAtribuicao();
+                                        break;
+
+                                case 2:
+                                        imprimirOperadoresAritimeticos();
+                                        break;
+
+                                case 3:
+                                        imprimirOperadoresUnarios();
+                                        break;
+
+                                case 4:
+                                        imprimirOperadoresRelacionais();
+                                        break;
+
+                                case 5:
+                                        imprimirOperadoresLogicos();
+                                        break;
+
+                        }
+
+                        System.out.println(texto);
+                        numeroSubTopico = scanner.nextInt();
+                }
         }
 }
