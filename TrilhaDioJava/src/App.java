@@ -3,6 +3,8 @@ import ConhecendoJava.SintaxeJava.Operadores.Operadores;
 import ConhecendoJava.SintaxeJava.Metodos.Metodos;
 import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
+import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
+
 import java.util.Scanner;
 
 public class App {
@@ -13,7 +15,19 @@ public class App {
     static PalavrasReservadas palavrasReservadas = new PalavrasReservadas();
 
     public static void main(String[] args) throws Exception {
-        selecionarAssunto();
+
+        // Comandos para impressão do assunto
+        // SelecionarAssunto();
+
+        // Encadeando 4 nós = no1->no2->no3->no4
+        /*
+         * ObjNo<String> no1 = new ObjNo<String>("Conteúdo 1");
+         * ObjNo<String> no2 = new ObjNo<String>("Conteúdo 2");
+         * no1.setProximo(no2);
+         * ObjNo<String> no3 = new ObjNo<String>("Conteúdo 3");
+         * no2.setProximo(no3);
+         * System.out.println(no1.getConteudo());
+         */
     }
 
     public static void selecionarAssunto() {
