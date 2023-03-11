@@ -4,6 +4,8 @@ import ConhecendoJava.SintaxeJava.Metodos.Metodos;
 import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
 import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
+import EstruturaDeDadosJava.Pilha.No;
+import EstruturaDeDadosJava.Pilha.Pilha;
 
 import java.util.Scanner;
 
@@ -27,6 +29,25 @@ public class App {
          * ObjNo<String> no3 = new ObjNo<String>("Conteúdo 3");
          * no2.setProximo(no3);
          * System.out.println(no1.getConteudo());
+         */
+
+        // criando e editando uma pilha
+        /*
+         * Pilha minhaPilha = new Pilha();
+         * 
+         * minhaPilha.push(new No(1));
+         * minhaPilha.push(new No(2));
+         * minhaPilha.push(new No(3));
+         * minhaPilha.push(new No(4));
+         * minhaPilha.push(new No(5));
+         * minhaPilha.push(new No(6));
+         * 
+         * System.out.println(minhaPilha);
+         * System.out.println(minhaPilha.pop());
+         * System.out.println(minhaPilha);
+         * 
+         * minhaPilha.push(new No(100));
+         * System.out.println(minhaPilha);
          */
     }
 
