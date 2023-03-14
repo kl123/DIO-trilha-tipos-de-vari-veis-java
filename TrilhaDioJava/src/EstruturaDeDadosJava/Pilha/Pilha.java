@@ -1,7 +1,8 @@
 package EstruturaDeDadosJava.Pilha;
 
-public class Pilha {
-    private No referenciaNoEntradaPilha;
+public class Pilha<T> {
+
+    private No<T> referenciaNoEntradaPilha;
 
     // inicializa uam pilha nula
     public Pilha() {
@@ -9,21 +10,22 @@ public class Pilha {
     }
 
     // retorna o topo da pilha
-    public No top() {
+    public No<T> top() {
         return referenciaNoEntradaPilha;
     }
 
     // Adiciona um elemento ao topo da pilha
-    public void push(No novoNo) {
-        No refAuxilir = referenciaNoEntradaPilha;
+    public void push(T object) {
+        No<T> novoNo = new No<T>(object);
+        No<T> refAuxilir = referenciaNoEntradaPilha;
         referenciaNoEntradaPilha = novoNo;
         novoNo.setReferenciaNo(refAuxilir);
     }
 
     // Remove um elemento do topo da pilha e caso esteja vazia retorna nulo
-    public No pop() {
+    public No<T> pop() {
         if (!this.isEmpty()) {
-            No noPoped = referenciaNoEntradaPilha;
+            No<T> noPoped = referenciaNoEntradaPilha;
             referenciaNoEntradaPilha = referenciaNoEntradaPilha.getReferenciaNo();
             return noPoped;
         } else {
@@ -47,7 +49,7 @@ public class Pilha {
         stringRetorno += "          Pilha           \n";
         stringRetorno += "---------------------------\n";
 
-        No noAuxiliar = referenciaNoEntradaPilha;
+        No<T> noAuxiliar = referenciaNoEntradaPilha;
         while (true) {
             if (noAuxiliar != null) {
                 stringRetorno += "No{dado=" + noAuxiliar.getDado() + "}\n";

@@ -1,26 +1,27 @@
 package EstruturaDeDadosJava.Pilha;
 
-public class No {
-    private int dado;
-    private No referenciaNo = null;
+public class No<T> {
+    private T dado;
+    private No<T> referenciaNo;
 
-    public No(int dado) {
+    public No(T dado) {
+        referenciaNo = null;
         this.dado = dado;
     }
 
-    public int getDado() {
+    public T getDado() {
         return dado;
     }
 
-    public void setDado(int dado) {
+    public void setDado(T dado) {
         this.dado = dado;
     }
 
-    public No getReferenciaNo() {
+    public No<T> getReferenciaNo() {
         return referenciaNo;
     }
 
-    public void setReferenciaNo(No referenciaNo) {
+    public void setReferenciaNo(No<T> referenciaNo) {
         this.referenciaNo = referenciaNo;
     }
 

@@ -4,7 +4,7 @@ import ConhecendoJava.SintaxeJava.Metodos.Metodos;
 import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
 import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
-import EstruturaDeDadosJava.Pilha.No;
+import EstruturaDeDadosJava.Fila.Fila;
 import EstruturaDeDadosJava.Pilha.Pilha;
 
 import java.util.Scanner;
@@ -22,33 +22,51 @@ public class App {
         // SelecionarAssunto();
 
         // Encadeando 4 nós = no1->no2->no3->no4
-        /*
-         * ObjNo<String> no1 = new ObjNo<String>("Conteúdo 1");
-         * ObjNo<String> no2 = new ObjNo<String>("Conteúdo 2");
-         * no1.setProximo(no2);
-         * ObjNo<String> no3 = new ObjNo<String>("Conteúdo 3");
-         * no2.setProximo(no3);
-         * System.out.println(no1.getConteudo());
-         */
+
+        ObjNo<String> no1 = new ObjNo<String>("Conteúdo 1");
+        ObjNo<String> no2 = new ObjNo<String>("Conteúdo 2");
+        no1.setProximo(no2);
+        ObjNo<String> no3 = new ObjNo<String>("Conteúdo 3");
+        no2.setProximo(no3);
+        // System.out.println(no1.getConteudo());
 
         // criando e editando uma pilha
-        /*
-         * Pilha minhaPilha = new Pilha();
-         * 
-         * minhaPilha.push(new No(1));
-         * minhaPilha.push(new No(2));
-         * minhaPilha.push(new No(3));
-         * minhaPilha.push(new No(4));
-         * minhaPilha.push(new No(5));
-         * minhaPilha.push(new No(6));
-         * 
-         * System.out.println(minhaPilha);
-         * System.out.println(minhaPilha.pop());
-         * System.out.println(minhaPilha);
-         * 
-         * minhaPilha.push(new No(100));
-         * System.out.println(minhaPilha);
-         */
+        Pilha<Integer> minhaPilha = new Pilha<Integer>();
+
+        minhaPilha.push(1);
+        minhaPilha.push(2);
+        minhaPilha.push(3);
+        minhaPilha.push(4);
+        minhaPilha.push(5);
+        minhaPilha.push(6);
+
+        // System.out.println(minhaPilha);
+        // System.out.println(minhaPilha.pop());
+        // System.out.println(minhaPilha);
+
+        minhaPilha.push(100);
+        // System.out.println(minhaPilha);
+
+        // Cria uma fila
+        Fila<String> minhaFila = new Fila<String>();
+
+        // Adiciona elementos a fila
+        minhaFila.enqueue("Primeiro");
+        minhaFila.enqueue("Segundo");
+        minhaFila.enqueue("Terceiro");
+        minhaFila.enqueue("Quarto");
+
+        // System.out.println(minhaFila);
+
+        // Remove o primeiro elemento da fila
+        // System.out.println(minhaFila.dequeue());
+        // System.out.println(minhaFila);
+
+        minhaFila.enqueue("Último");
+        // System.out.println(minhaFila);
+        // System.out.println(minhaFila.first());
+        // System.out.println(minhaFila);
+
     }
 
     public static void selecionarAssunto() {
