@@ -5,6 +5,7 @@ import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
 import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
 import EstruturaDeDadosJava.Fila.Fila;
+import EstruturaDeDadosJava.ListaEncadeada.ListaEncadeada;
 import EstruturaDeDadosJava.Pilha.Pilha;
 
 import java.util.Scanner;
@@ -66,6 +67,19 @@ public class App {
         // System.out.println(minhaFila);
         // System.out.println(minhaFila.first());
         // System.out.println(minhaFila);
+
+        // Cria lista encadeada
+        ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<String>();
+
+        minhaListaEncadeada.add("Entrada 01");
+        minhaListaEncadeada.add("Entrada 02");
+        minhaListaEncadeada.add("Entrada 03");
+        minhaListaEncadeada.add("Entrada 04");
+        minhaListaEncadeada.add("Entrada 05");
+
+        System.out.println(minhaListaEncadeada);
+        System.out.println(minhaListaEncadeada.remove(4));
+        System.out.println(minhaListaEncadeada);
 
     }
 
