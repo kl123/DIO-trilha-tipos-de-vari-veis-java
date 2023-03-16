@@ -5,6 +5,7 @@ import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
 import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
 import EstruturaDeDadosJava.Fila.Fila;
+import EstruturaDeDadosJava.ListaDuplamenteEncadeada.ListaDuplamenteEncadeada;
 import EstruturaDeDadosJava.ListaEncadeada.ListaEncadeada;
 import EstruturaDeDadosJava.Pilha.Pilha;
 
@@ -77,10 +78,24 @@ public class App {
         minhaListaEncadeada.add("Entrada 04");
         minhaListaEncadeada.add("Entrada 05");
 
-        System.out.println(minhaListaEncadeada);
-        System.out.println(minhaListaEncadeada.remove(4));
-        System.out.println(minhaListaEncadeada);
+        // System.out.println(minhaListaEncadeada);
+        // System.out.println(minhaListaEncadeada.remove(4));
+        // System.out.println(minhaListaEncadeada);
 
+        ListaDuplamenteEncadeada<String> minhaListaDuplamenteEncadeada = new ListaDuplamenteEncadeada<String>();
+        minhaListaDuplamenteEncadeada.add("Entrada 01");
+        minhaListaDuplamenteEncadeada.add("Entrada 02");
+        minhaListaDuplamenteEncadeada.add("Entrada 03");
+        minhaListaDuplamenteEncadeada.add("Entrada 04");
+        minhaListaDuplamenteEncadeada.add("Entrada 05");
+        System.out.println(minhaListaDuplamenteEncadeada);
+        System.out.println(minhaListaDuplamenteEncadeada.get(3));
+        minhaListaDuplamenteEncadeada.add(0, "Entrada 00");
+        System.out.println(minhaListaDuplamenteEncadeada);
+        minhaListaDuplamenteEncadeada.add(5, "Entrada 4.5");
+        System.out.println(minhaListaDuplamenteEncadeada);
+        minhaListaDuplamenteEncadeada.remove(0);
+        System.out.println(minhaListaDuplamenteEncadeada);
     }
 
     public static void selecionarAssunto() {
