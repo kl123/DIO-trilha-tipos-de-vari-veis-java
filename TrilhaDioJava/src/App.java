@@ -5,6 +5,7 @@ import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
 import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
 import EstruturaDeDadosJava.Fila.Fila;
+import EstruturaDeDadosJava.ListaCircular.ListaCircular;
 import EstruturaDeDadosJava.ListaDuplamenteEncadeada.ListaDuplamenteEncadeada;
 import EstruturaDeDadosJava.ListaEncadeada.ListaEncadeada;
 import EstruturaDeDadosJava.Pilha.Pilha;
@@ -88,14 +89,37 @@ public class App {
         minhaListaDuplamenteEncadeada.add("Entrada 03");
         minhaListaDuplamenteEncadeada.add("Entrada 04");
         minhaListaDuplamenteEncadeada.add("Entrada 05");
-        System.out.println(minhaListaDuplamenteEncadeada);
-        System.out.println(minhaListaDuplamenteEncadeada.get(3));
+        // System.out.println(minhaListaDuplamenteEncadeada);
+        // System.out.println(minhaListaDuplamenteEncadeada.get(3));
         minhaListaDuplamenteEncadeada.add(0, "Entrada 00");
-        System.out.println(minhaListaDuplamenteEncadeada);
+        // System.out.println(minhaListaDuplamenteEncadeada);
         minhaListaDuplamenteEncadeada.add(5, "Entrada 4.5");
-        System.out.println(minhaListaDuplamenteEncadeada);
+        // System.out.println(minhaListaDuplamenteEncadeada);
         minhaListaDuplamenteEncadeada.remove(0);
-        System.out.println(minhaListaDuplamenteEncadeada);
+        // System.out.println(minhaListaDuplamenteEncadeada);
+
+        ListaCircular<String> minhaListaCircular = new ListaCircular<String>();
+        System.out.println(minhaListaCircular);
+        minhaListaCircular.add("Entrada 01");
+        minhaListaCircular.add("Entrada 02");
+        minhaListaCircular.add("Entrada 03");
+        minhaListaCircular.add("Entrada 04");
+        minhaListaCircular.add("Entrada 05");
+        System.out.println(minhaListaCircular);
+        System.out.println(minhaListaCircular.get(0));
+        System.out.println(minhaListaCircular.get(1));
+        System.out.println(minhaListaCircular.get(2));
+        System.out.println(minhaListaCircular.get(3));
+        System.out.println(minhaListaCircular.get(4));
+        System.out.println(minhaListaCircular.get(5));
+        System.out.println(minhaListaCircular.get(6));
+        System.out.println(minhaListaCircular.get(7));
+        System.out.println(minhaListaCircular.get(8));
+        System.out.println(minhaListaCircular.get(9));
+        minhaListaCircular.remove(0);
+        System.out.println(minhaListaCircular);
+        minhaListaCircular.remove(3);
+        System.out.println(minhaListaCircular);
     }
 
     public static void selecionarAssunto() {
