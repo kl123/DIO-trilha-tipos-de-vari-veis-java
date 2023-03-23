@@ -3,6 +3,8 @@ import ConhecendoJava.SintaxeJava.Operadores.Operadores;
 import ConhecendoJava.SintaxeJava.Metodos.Metodos;
 import ConhecendoJava.SintaxeJava.Escopo.Escopo;
 import ConhecendoJava.SintaxeJava.PalavrasReservadas.PalavrasReservadas;
+import EstruturaDeDadosJava.ArvoreBinaria.ArvoreBinaria;
+import EstruturaDeDadosJava.ArvoreBinaria.Model.Obj;
 import EstruturaDeDadosJava.EncadeamentoNo.ObjNo;
 import EstruturaDeDadosJava.Fila.Fila;
 import EstruturaDeDadosJava.ListaCircular.ListaCircular;
@@ -99,27 +101,48 @@ public class App {
         // System.out.println(minhaListaDuplamenteEncadeada);
 
         ListaCircular<String> minhaListaCircular = new ListaCircular<String>();
-        System.out.println(minhaListaCircular);
+        // System.out.println(minhaListaCircular);
         minhaListaCircular.add("Entrada 01");
         minhaListaCircular.add("Entrada 02");
         minhaListaCircular.add("Entrada 03");
         minhaListaCircular.add("Entrada 04");
         minhaListaCircular.add("Entrada 05");
-        System.out.println(minhaListaCircular);
-        System.out.println(minhaListaCircular.get(0));
-        System.out.println(minhaListaCircular.get(1));
-        System.out.println(minhaListaCircular.get(2));
-        System.out.println(minhaListaCircular.get(3));
-        System.out.println(minhaListaCircular.get(4));
-        System.out.println(minhaListaCircular.get(5));
-        System.out.println(minhaListaCircular.get(6));
-        System.out.println(minhaListaCircular.get(7));
-        System.out.println(minhaListaCircular.get(8));
-        System.out.println(minhaListaCircular.get(9));
+        // System.out.println(minhaListaCircular);
+        // System.out.println(minhaListaCircular.get(0));
+        // System.out.println(minhaListaCircular.get(1));
+        // System.out.println(minhaListaCircular.get(2));
+        // System.out.println(minhaListaCircular.get(3));
+        // System.out.println(minhaListaCircular.get(4));
+        // System.out.println(minhaListaCircular.get(5));
+        // System.out.println(minhaListaCircular.get(6));
+        // System.out.println(minhaListaCircular.get(7));
+        // System.out.println(minhaListaCircular.get(8));
+        // System.out.println(minhaListaCircular.get(9));
         minhaListaCircular.remove(0);
-        System.out.println(minhaListaCircular);
+        // System.out.println(minhaListaCircular);
         minhaListaCircular.remove(3);
-        System.out.println(minhaListaCircular);
+        // System.out.println(minhaListaCircular);
+
+        ArvoreBinaria<Obj> minhaArvoreBinaria = new ArvoreBinaria<Obj>();
+        minhaArvoreBinaria.inserir(new Obj(13));
+        minhaArvoreBinaria.inserir(new Obj(10));
+        minhaArvoreBinaria.inserir(new Obj(25));
+        minhaArvoreBinaria.inserir(new Obj(2));
+        minhaArvoreBinaria.inserir(new Obj(12));
+        minhaArvoreBinaria.inserir(new Obj(20));
+        minhaArvoreBinaria.inserir(new Obj(31));
+        minhaArvoreBinaria.inserir(new Obj(29));
+
+        minhaArvoreBinaria.exibirInOrdem();
+        minhaArvoreBinaria.exibirPosOrdem();
+        minhaArvoreBinaria.exibirPreOrdem();
+
+        minhaArvoreBinaria.remover(new Obj(13));
+
+        minhaArvoreBinaria.exibirInOrdem();
+        minhaArvoreBinaria.exibirPosOrdem();
+        minhaArvoreBinaria.exibirPreOrdem();
+
     }
 
     public static void selecionarAssunto() {
